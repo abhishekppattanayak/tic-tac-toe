@@ -57,6 +57,11 @@ const board = (()=>{
             && _array[0][2]===_array[1][1] && _array[0][2]===_array[2][0])
                 return _array[0][2];
 
+        if(_array[0][0] && _array[0][1] && _array[0][2] &&
+            _array[1][0] && _array[1][1] && _array[1][2] && 
+            _array[2][0] && _array[2][1] && _array[2][2] )
+                return "TIE";
+
         return undefined;
 
     }

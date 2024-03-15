@@ -15,7 +15,12 @@ const __init__ = ()=>{
                     board.setTile(i,j,tile.textContent);
                     player.switchMarker();
                     if(board.checkWin()){
-                        document.querySelector('footer').textContent = `Player ${board.checkWin()} has won!!`;
+                        if(board.checkWin()==="TIE"){
+                            document.querySelector('footer').textContent = "It's a TIE!";
+                        }
+                        else{
+                            document.querySelector('footer').textContent = `Player ${board.checkWin()} has won!!`;
+                        }
                         board.disableState();
                     }
                 }
